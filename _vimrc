@@ -1,4 +1,4 @@
-command R !python %
+п»їcommand R !python %
 
 set nocompatible
 filetype off                  " required
@@ -139,59 +139,59 @@ if has("gui_running")
 endif
 set ttyfast
 
-" включить подсветку кода
+" РІРєР»СЋС‡РёС‚СЊ РїРѕРґСЃРІРµС‚РєСѓ РєРѕРґР°
 syntax on
 if has("gui_running")
-" GUI? устаналиваем тему и размер окна
+" GUI? СѓСЃС‚Р°РЅР°Р»РёРІР°РµРј С‚РµРјСѓ Рё СЂР°Р·РјРµСЂ РѕРєРЅР°
   set lines=49 columns=180
   colorscheme molokai
-" раскомментируйте эти строки, если хотите, чтобы NERDTree/TagBar автоматически отображались при запуске vim
+" СЂР°СЃРєРѕРјРјРµРЅС‚РёСЂСѓР№С‚Рµ СЌС‚Рё СЃС‚СЂРѕРєРё, РµСЃР»Рё С…РѕС‚РёС‚Рµ, С‡С‚РѕР±С‹ NERDTree/TagBar Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РѕС‚РѕР±СЂР°Р¶Р°Р»РёСЃСЊ РїСЂРё Р·Р°РїСѓСЃРєРµ vim
 " autocmd vimenter * TagbarToggle
 " autocmd vimenter * NERDTree
 " autocmd vimenter * if !argc() | NERDTree | endif
 
-" на маке vim?
+" РЅР° РјР°РєРµ vim?
 if has("mac")
   set guifont=Consolas:h13
   set fuoptions=maxvert,maxhorz
 else
-" дефолтный GUI
+" РґРµС„РѕР»С‚РЅС‹Р№ GUI
   set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 10
 endif
 else
-" терминал?
+" С‚РµСЂРјРёРЅР°Р»?
   colorscheme myterm
 endif
 set guifont=Anonymice_Powerline:h15:cRUSSIAN
 tab sball
 set switchbuf=useopen
 
-" отключаем пищалку и мигание
+" РѕС‚РєР»СЋС‡Р°РµРј РїРёС‰Р°Р»РєСѓ Рё РјРёРіР°РЅРёРµ
 set visualbell t_vb= 
 set novisualbell       
 
-set enc=utf-8	     " utf-8 по дефолту в файлах
-set ls=2             " всегда показываем статусбар
-set incsearch	     " инкреминтируемый поиск
-set hlsearch	     " подсветка результатов поиска
-set nu	             " показывать номера строк
-set scrolloff=5	     " 5 строк при скролле за раз
+set enc=utf-8	     " utf-8 РїРѕ РґРµС„РѕР»С‚Сѓ РІ С„Р°Р№Р»Р°С…
+set ls=2             " РІСЃРµРіРґР° РїРѕРєР°Р·С‹РІР°РµРј СЃС‚Р°С‚СѓСЃР±Р°СЂ
+set incsearch	     " РёРЅРєСЂРµРјРёРЅС‚РёСЂСѓРµРјС‹Р№ РїРѕРёСЃРє
+set hlsearch	     " РїРѕРґСЃРІРµС‚РєР° СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РїРѕРёСЃРєР°
+set nu	             " РїРѕРєР°Р·С‹РІР°С‚СЊ РЅРѕРјРµСЂР° СЃС‚СЂРѕРє
+set scrolloff=5	     " 5 СЃС‚СЂРѕРє РїСЂРё СЃРєСЂРѕР»Р»Рµ Р·Р° СЂР°Р·
 
-" отключаем бэкапы и своп-файлы
+" РѕС‚РєР»СЋС‡Р°РµРј Р±СЌРєР°РїС‹ Рё СЃРІРѕРї-С„Р°Р№Р»С‹
 set nobackup 	     " no backup files
 set nowritebackup    " only in case you don't want a backup file while editing
 set noswapfile 	     " no swap files
 
-" прячем панельки
-"set guioptions-=m   " меню
-set guioptions-=T    " тулбар
-"set guioptions-=r   "  скроллбары
+" РїСЂСЏС‡РµРј РїР°РЅРµР»СЊРєРё
+"set guioptions-=m   " РјРµРЅСЋ
+set guioptions-=T    " С‚СѓР»Р±Р°СЂ
+"set guioptions-=r   "  СЃРєСЂРѕР»Р»Р±Р°СЂС‹
 
-" настройка на Tab
+" РЅР°СЃС‚СЂРѕР№РєР° РЅР° Tab
 set smarttab
 set tabstop=4
 
-"  при переходе за границу в 80 символов в Ruby/Python/js/C/C++ подсвечиваем на темном фоне текст
+"  РїСЂРё РїРµСЂРµС…РѕРґРµ Р·Р° РіСЂР°РЅРёС†Сѓ РІ 80 СЃРёРјРІРѕР»РѕРІ РІ Ruby/Python/js/C/C++ РїРѕРґСЃРІРµС‡РёРІР°РµРј РЅР° С‚РµРјРЅРѕРј С„РѕРЅРµ С‚РµРєСЃС‚
 augroup vimrc_autocmds
     autocmd!
     autocmd FileType ruby,python,javascript,c,cpp highlight Excess ctermbg=DarkGrey guibg=Black
@@ -199,69 +199,69 @@ augroup vimrc_autocmds
     autocmd FileType ruby,python,javascript,c,cpp set nowrap
 augroup END
 
-" указываем каталог с настройками SnipMate
+" СѓРєР°Р·С‹РІР°РµРј РєР°С‚Р°Р»РѕРі СЃ РЅР°СЃС‚СЂРѕР№РєР°РјРё SnipMate
 let g:snippets_dir = "~/.vim/vim-snippets/snippets"
 
-" настройки Vim-Airline
+" РЅР°СЃС‚СЂРѕР№РєРё Vim-Airline
 set laststatus=2
 let g:airline_theme='badwolf'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-" TagBar настройки
+" TagBar РЅР°СЃС‚СЂРѕР№РєРё
 map <F4> :TagbarToggle<CR>
-let g:tagbar_autofocus = 0 " автофокус на Tagbar при открытии
+let g:tagbar_autofocus = 0 " Р°РІС‚РѕС„РѕРєСѓСЃ РЅР° Tagbar РїСЂРё РѕС‚РєСЂС‹С‚РёРё
 
-" NerdTree настройки
-" показать NERDTree на F3
+" NerdTree РЅР°СЃС‚СЂРѕР№РєРё
+" РїРѕРєР°Р·Р°С‚СЊ NERDTree РЅР° F3
 map <F3> :NERDTreeToggle<CR>
-"игноррируемые файлы с расширениями
+"РёРіРЅРѕСЂСЂРёСЂСѓРµРјС‹Рµ С„Р°Р№Р»С‹ СЃ СЂР°СЃС€РёСЂРµРЅРёСЏРјРё
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.pyo$', '\.class$', 'pip-log\.txt$', '\.o$']  
 
-" TaskList настройки
-map <F2> :TaskList<CR> 	   " отобразить список тасков на F2
+" TaskList РЅР°СЃС‚СЂРѕР№РєРё
+map <F2> :TaskList<CR> 	   " РѕС‚РѕР±СЂР°Р·РёС‚СЊ СЃРїРёСЃРѕРє С‚Р°СЃРєРѕРІ РЅР° F2
 
-" Работа буфферами
-map <C-q> :bd<CR> 	   " CTRL+Q - закрыть текущий буффер
+" Р Р°Р±РѕС‚Р° Р±СѓС„С„РµСЂР°РјРё
+map <C-q> :bd<CR> 	   " CTRL+Q - Р·Р°РєСЂС‹С‚СЊ С‚РµРєСѓС‰РёР№ Р±СѓС„С„РµСЂ
 
 "=====================================================
 " Python-mode settings
 "=====================================================
-" отключаем автокомплит по коду (у нас вместо него используется jedi-vim)
+" РѕС‚РєР»СЋС‡Р°РµРј Р°РІС‚РѕРєРѕРјРїР»РёС‚ РїРѕ РєРѕРґСѓ (Сѓ РЅР°СЃ РІРјРµСЃС‚Рѕ РЅРµРіРѕ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ jedi-vim)
 let g:pymode_rope = 1
 let g:pymode_rope_completion = 1
 let g:pymode_rope_complete_on_dot = 1
 
 let g:pymode_python = 'python3'
 
-" документация
+" РґРѕРєСѓРјРµРЅС‚Р°С†РёСЏ
 "let g:pymode_doc = 1
 "let g:pymode_doc_key = 'K'
-" проверка кода
+" РїСЂРѕРІРµСЂРєР° РєРѕРґР°
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8"
 let g:pymode_lint_ignore="E501,W601,C0110"
-" провека кода после сохранения
+" РїСЂРѕРІРµРєР° РєРѕРґР° РїРѕСЃР»Рµ СЃРѕС…СЂР°РЅРµРЅРёСЏ
 let g:pymode_lint_write = 1
 
-" поддержка virtualenv
+" РїРѕРґРґРµСЂР¶РєР° virtualenv
 let g:pymode_virtualenv = 1
 
-" установка breakpoints
+" СѓСЃС‚Р°РЅРѕРІРєР° breakpoints
 let g:pymode_breakpoint = 1
 let g:pymode_breakpoint_key = '<leader>b'
 
-" подстветка синтаксиса
+" РїРѕРґСЃС‚РІРµС‚РєР° СЃРёРЅС‚Р°РєСЃРёСЃР°
 let g:pymode_syntax = 1
 let g:pymode_syntax_all = 1
 let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
-" отключить autofold по коду
+" РѕС‚РєР»СЋС‡РёС‚СЊ autofold РїРѕ РєРѕРґСѓ
 let g:pymode_folding = 0
 
-" возможность запускать код
+" РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ Р·Р°РїСѓСЃРєР°С‚СЊ РєРѕРґ
 let g:pymode_run = 1
 let g:pymode_run_key = '<leader>r'
 
@@ -277,7 +277,7 @@ set guioptions-=r  "scrollbar in gvim turn 0ff
 " Languages support
 "=====================================================
 " --- Python ---
-"autocmd FileType python set completeopt-=preview " раскомментируйте, в случае, если не надо, чтобы jedi-vim показывал документацию по методу/классу
+"autocmd FileType python set completeopt-=preview " СЂР°СЃРєРѕРјРјРµРЅС‚РёСЂСѓР№С‚Рµ, РІ СЃР»СѓС‡Р°Рµ, РµСЃР»Рё РЅРµ РЅР°РґРѕ, С‡С‚РѕР±С‹ jedi-vim РїРѕРєР°Р·С‹РІР°Р» РґРѕРєСѓРјРµРЅС‚Р°С†РёСЋ РїРѕ РјРµС‚РѕРґСѓ/РєР»Р°СЃСЃСѓ
 autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8
 \ formatoptions+=croq softtabstop=4 smartindent
 \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
